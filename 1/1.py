@@ -2,9 +2,10 @@ import csv
 import os
 import shutil
 
-a = os.listdir('./Project-s1_Files')
+a = os.listdir('./1/Project-s1_Files')
+print(a)
 
-with open(r'persons.csv', encoding="utf-8")as file:
+with open(r'./1/Project-s1_Files/persons.csv', encoding="utf-8")as file:
     
     csvFile = csv.reader(file)
     count = 0
@@ -13,9 +14,10 @@ with open(r'persons.csv', encoding="utf-8")as file:
             count += 1
             continue
         else:
-            os.mkdir(lines[1])
+            path = f"./1/{lines[1]}"
+            os.mkdir(path)
             for i in a:
                 if i[0:10] == lines[0]:
-
-                    shutil.move(f'./Project-s1_Files/{i}',lines[1])
+                    shutil.move(f'./1/Project-s1_Files/{i}',path)
+                    
         
