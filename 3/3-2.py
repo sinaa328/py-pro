@@ -62,23 +62,32 @@ def back():
 while True:
     print('***** welcome to the contact book *****')
     print('enter:\n     1 for add contact\n     2 for search a contact\n     3 for edit a contact\n     4 for delete a contact')
-    v = int(input('-'))
-    if v == 1:
-        add_contact()
-        back()
-        os.system('cls' if os.name == 'nt' else 'clear')
-    elif v == 2:
-        search()
-        back()
-        os.system('cls' if os.name == 'nt' else 'clear')
-    elif v == 3:
-        edit()
-        back()
-        os.system('cls' if os.name == 'nt' else 'clear')
-    elif v == 4:
-        delete()
-        back()
-        os.system('cls' if os.name == 'nt' else 'clear')
-    else:
+    v = input('-')
+
+    try:
+        v = int(v)
+
+        if v == 1:
+            add_contact()
+            back()
+            os.system('cls' if os.name == 'nt' else 'clear')
+        elif v == 2:
+            search()
+            back()
+            os.system('cls' if os.name == 'nt' else 'clear')
+        elif v == 3:
+            edit()
+            back()
+            os.system('cls' if os.name == 'nt' else 'clear')
+        elif v == 4:
+            delete()
+            back()
+            os.system('cls' if os.name == 'nt' else 'clear')
+        else:
+            print('wrong')
+            l = input('press any key to go back menu: ')
+            os.system('cls' if os.name == 'nt' else 'clear')
+    except:
         print('wrong')
+        l = input('press any key to go back menu: ')
         os.system('cls' if os.name == 'nt' else 'clear')
