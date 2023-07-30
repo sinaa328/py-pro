@@ -28,7 +28,7 @@ with open('new.csv','w',encoding='utf-8',newline='') as csv_file:
                 print(d[1])
                 dollor = d[1]
                 count += 1
-            time.sleep(10)  
+            time.sleep(120)  
             
         except:
             continue      

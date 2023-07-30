@@ -58,7 +58,6 @@ def back():
     l = input('press any key to go back menu: ')
 
 
-# menu bog dare - age str bzni err mide
 while True:
     print('***** welcome to the contact book *****')
     print('enter:\n     1 for add contact\n     2 for search a contact\n     3 for edit a contact\n     4 for delete a contact')
@@ -85,9 +84,9 @@ while True:
             os.system('cls' if os.name == 'nt' else 'clear')
         else:
             print('wrong')
-            l = input('press any key to go back menu: ')
+            back()
             os.system('cls' if os.name == 'nt' else 'clear')
     except:
         print('wrong')
-        l = input('press any key to go back menu: ')
+        back()
         os.system('cls' if os.name == 'nt' else 'clear')
