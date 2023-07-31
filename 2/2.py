@@ -50,13 +50,20 @@ for i in income_per_experince:
     second_chart_x.append(i)
     second_chart_y.append(math.floor(income_per_experince[i][0]/income_per_experince[i][1]))
 
+
+third_chart_x = []
+third_chart_y = []
+
+# for i in income_per_country:
+
 # print(job_titles_per_income)
 # print(income_per_experince)
 # print(income_per_country)
 
-fig, ax = plt.subplots()
-ax.plot(first_chart_x, first_chart_y)
-ax.plot(second_chart_x,second_chart_y)
+# fig, ax = plt.subplots()
+
+plt.plot(first_chart_x, first_chart_y)
+plt.plot(second_chart_x,second_chart_y)
 
 plt.show()
 
