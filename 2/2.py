@@ -1,4 +1,8 @@
 import csv
+import math
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import numpy as np
 
 
 job_titles_per_income = {}
@@ -30,10 +34,22 @@ with open(r'./2/salaries_cyber.csv', encoding='utf-8')as file:
                 else:
                     income_per_country[lines[7]] = [int(lines[6]),1]
 
-# for i in job_titles_per_income:
-#     print(job_titles_per_income[i][0]/job_titles_per_income[i][1])
 
+first_chart_x = []
+first_chart_y = []
+
+for i in job_titles_per_income:
+    first_chart_x.append(i)
+    first_chart_y.append(math.floor(job_titles_per_income[i][0]/job_titles_per_income[i][1]))
+    # print(job_titles_per_income[i][0]/job_titles_per_income[i][1])
+
+# print(first_chart_y)
 
 # print(job_titles_per_income)
 # print(income_per_experince)
 # print(income_per_country)
+
+fig, ax = plt.subplots()
+ax.plot(first_chart_x, first_chart_y)
+
+plt.show()
