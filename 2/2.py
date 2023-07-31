@@ -41,9 +41,14 @@ first_chart_y = []
 for i in job_titles_per_income:
     first_chart_x.append(i)
     first_chart_y.append(math.floor(job_titles_per_income[i][0]/job_titles_per_income[i][1]))
-    # print(job_titles_per_income[i][0]/job_titles_per_income[i][1])
 
-# print(first_chart_y)
+
+second_chart_x = []
+second_chart_y = []
+
+for i in income_per_experince:
+    second_chart_x.append(i)
+    second_chart_y.append(math.floor(income_per_experince[i][0]/income_per_experince[i][1]))
 
 # print(job_titles_per_income)
 # print(income_per_experince)
@@ -51,5 +56,7 @@ for i in job_titles_per_income:
 
 fig, ax = plt.subplots()
 ax.plot(first_chart_x, first_chart_y)
+ax.plot(second_chart_x,second_chart_y)
 
 plt.show()
+
